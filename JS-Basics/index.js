@@ -15,7 +15,7 @@
         console.log(`Name is ${firstName} and type is ${typeof(firstName)}`);
 
 
-        // I think below is an array? Not entirely sure, type is object
+        // Below is just called object in tutorial, type is object. Is pretty much a Python Dictionary
         let person = {
             name: 'Mosh',
             age: 30
@@ -43,6 +43,8 @@
 
         let pronky = {};// This is known as an object literal
 
+
+
         // Arrays
         //
         let selectedColors = [];// Array literal, empty array
@@ -61,6 +63,8 @@
         // Note: if you pass wrong number of args, so only 1 below, then in function the parameter lastName is undefined
         greet('Jack');
 
+
+
         // Comparison Operators
         //
         // Equality Operators
@@ -78,6 +82,8 @@
         let points = 110;
         let type = points > 100 ? 'gold' : 'silver';
         console.log(type);
+
+
 
         // Logical Operators
         // Logical AND (&&)
@@ -102,14 +108,30 @@
         
         console.log(currentColor);
 
+
+
         // BitWise Operators
         // Uses binary form of numbers
 
         // 1 = 00000001
         // 2 = 00000010
-        // Result, R comparison is in column type fashion, or comparing same position in binary representation
-        // R1 = 00000011
-        // R2 = 00000000
+        // Result, R comparison is in column type fashion, or comparing same bit position in binary representation
+        // R1 = 00000011 which is 3 in decimal system
+        // R2 = 00000000 which is 0
 
         console.log(1 | 2);// Bitwise OR, give the result R1
         console.log(1 & 2);// Bitwise AND, give the result R2
+
+        // An example of using Bitwise in real world is read, write, execute permissions, which actually exists in Linux.
+        // See part 24 in JS-basics-for-beginners
+
+        let a = 'red';
+        let b = 'blue';
+        let tempb = b;
+
+        b = a;
+        a = tempb;
+
+
+        console.log('a is : ', a);
+        console.log('b is : ', b);
