@@ -108,4 +108,8 @@
         // 1 = 00000001
         // 2 = 00000010
         // Result, R comparison is in column type fashion, or comparing same position in binary representation
-        // R = 00000011
+        // R1 = 00000011
+        // R2 = 00000000
+
+        console.log(1 | 2);// Bitwise OR, give the result R1
+        console.log(1 & 2);// Bitwise AND, give the result R2
