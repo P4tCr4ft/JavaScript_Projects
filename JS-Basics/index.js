@@ -1,5 +1,5 @@
         // Some JavaScript code ...
-        console.log('Hello the funny World');
+        console.log('Hello the funny funny World');
 
         // Latest convention after es6 is to use let keyword to declare a variable, as var has issues
         // So if declare only, and don't initialise, the variable will be undefined.
