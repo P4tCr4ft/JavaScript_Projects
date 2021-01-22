@@ -24,6 +24,8 @@ function printMatrix (matrix) {
   
   printMatrix(matrix);
 
+  console.log(``);
+
   // So with function scope, this would only output 
   // 1
   // 2
@@ -32,6 +34,25 @@ function printMatrix (matrix) {
 
   // In ES6 things were changed to be inline with most programming languages, so JS now has block scope.
   // So behaves as expected, and there are 2 distinct i's in their own scope, and output is as expected
+
+  function printMatrix2 (matrix) {
+    for (let i = 0; i < matrix.length; i++) {
+      const line = matrix[i];
+      for (let i = 0; i < line.length; i++) {
+        const element = line[i];
+        console.log(element);
+      }
+    }
+  }
+  
+  const matrix2 = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+  ];
+  
+  printMatrix2(matrix2);
+
 /*
   1
   2
