@@ -73,3 +73,6 @@ console.log(`big JOURNAL is ${JOURNAL[0]["events"]}`);
 for (let event of journalEvents(journal)){
     console.log(event + ":", phi(tableFor(event, journal)));
 }
+
+// test change for git auth issue
+
