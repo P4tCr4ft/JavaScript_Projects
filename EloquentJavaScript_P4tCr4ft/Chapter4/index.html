@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    </head>
+    <body>
+        <h1>Test Page</h1>
+        <!-- <script src="lycan_journal_functions.js"> -->
+            // Below is not ok, cannot have both src ref
+            // and inline JS in single element.
+            // let test_array = [1, 2, 3];
+            // console.log(`test array is ${test_array}`);
+            // console.log(`Phi is ${phi([76, 9, 4, 1])}`)
+
+        <!-- </script> -->
+        <script src="journal.js"></script>
+        <script src="lycan_journal_functions.js"></script>
+        <script>
+            // This is ok, and does work.
+            // Note also, this JS can access objects from the
+            // ref JS file above, such as phi function.
+            // let test_array = [1, 2, 3];
+            // console.log(`test array is ${test_array}`);
+            // console.log(`Phi is ${phi([76, 9, 4, 1])}`)
+        </script>
+    </body>
+</html>

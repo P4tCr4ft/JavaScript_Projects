@@ -64,7 +64,3 @@ function printMatrix (matrix) {
   8
   9
 */
-
-// NOTE: comment to test git auth issues
-// NOTE: another comment to fix git auth issue
-
