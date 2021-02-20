@@ -75,4 +75,6 @@ for (let event of journalEvents(journal)){
 }
 
 // test change for git auth issue
+// Add another test comment after log out and in again
+
 
