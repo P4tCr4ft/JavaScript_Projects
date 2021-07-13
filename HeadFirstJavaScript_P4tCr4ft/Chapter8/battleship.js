@@ -177,7 +177,6 @@ const controller = {
 // view.displayMiss("55");
 // view.displayHit("12");
 // view.displayMiss("25");
-// view.displayHit("26");
 
 
 
