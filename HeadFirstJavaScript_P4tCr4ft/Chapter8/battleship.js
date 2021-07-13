@@ -178,7 +178,6 @@ const controller = {
 // view.displayHit("12");
 // view.displayMiss("25");
 // view.displayHit("26");
-// view.displayMessage("Anyone home?");
 
 
 
