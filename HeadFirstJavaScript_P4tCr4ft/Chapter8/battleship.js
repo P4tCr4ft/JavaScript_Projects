@@ -1,5 +1,5 @@
 // Steve Triplett
-// HeadFirst JS Programming Ch 10
+// HeadFirst JS Programming Ch 8
 // July 2021
 
 const init = () => {
