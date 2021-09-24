@@ -1,0 +1,31 @@
+<p>Assignment 2</p>
+<label>Username</label>
+<input
+type="text"
+class="form-control"
+[(ngModel)]="username"
+>
+<!-- <input
+type="text"
+class="form-control"
+(input)="checkUsername($event)"
+> -->
+<p>Username is {{ username }}</p>
+<!-- 
+<button
+class="btn btn-primary"
+[disabled]="!allowReset"
+(click)="resetUsername()"
+>Reset Username</button> -->
+
+<!-- <button
+class="btn btn-primary"
+[disabled]="!username"
+(click)="resetUsername()"
+>Reset Username</button> -->
+
+<button
+class="btn btn-primary"
+[disabled]="!username"
+(click)="username = ''"
+>Reset Username</button>
