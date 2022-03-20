@@ -1,0 +1,20 @@
+<p>Assignment 3</p>
+
+<button class="btn btn-primary" (click)="toggleDisplayParagraph()">Display Details</button>
+
+<p *ngIf="displayParagraph">Secret Password = macTuna</p>
+
+<!-- 
+<p *ngFor="let click of buttonClicks">This is outer
+  <span *ngIf="buttonClicks.indexOf(click) < 4; else moreClicks">This is inner {{ click }}</span>
+  <ng-template #moreClicks>
+    <span
+    [ngClass]="{moreClicksStyle: true}">This is alternative inner {{ click }}</span>
+  </ng-template>
+</p> -->
+
+
+<p *ngFor="let click of buttonClicks"
+  [ngClass]="{moreClicksStyle: buttonClicks.indexOf(click) >= 4}"
+  >{{ click }}
+</p>
