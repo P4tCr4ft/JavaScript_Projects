@@ -16,7 +16,7 @@ export class Assign3Component implements OnInit {
 
   toggleDisplayParagraph () {
     this.displayParagraph = !this.displayParagraph;
-    this.buttonClicks.push(Date.now());
+    this.buttonClicks.push(new Date());
   }
 
 }

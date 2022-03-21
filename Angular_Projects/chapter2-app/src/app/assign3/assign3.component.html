@@ -13,8 +13,15 @@
   </ng-template>
 </p> -->
 
-
-<p *ngFor="let click of buttonClicks"
+<!-- My original solution -->
+<!-- <p *ngFor="let click of buttonClicks"
   [ngClass]="{moreClicksStyle: buttonClicks.indexOf(click) >= 4}"
   >{{ click }}
+</p> -->
+
+<!-- Tutorial method using idex keyword -->
+ <p *ngFor="let click of buttonClicks; let i = index"
+ [ngClass]="{moreClicksStyle: i >= 4}"
+ >{{ click }}
 </p>
+
