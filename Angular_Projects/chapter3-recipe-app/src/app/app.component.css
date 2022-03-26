@@ -1,0 +1,28 @@
+.row {
+  margin: 0px;
+}
+
+.col-md-3 {
+  background-color: lightgreen;
+}
+
+.col-md-4 {
+  background-color: purple;
+  color: white;
+  padding: 5px;
+  margin: 10px;
+}
+
+.col-md-6 {
+  background-color: lightcoral;
+}
+
+.col-md-8 {
+  background-color: orange;
+  color: white;
+  margin: 10px;
+}
+
+.col-md-12 {
+  background-color: pink;
+}
