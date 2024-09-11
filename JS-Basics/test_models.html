@@ -1,0 +1,101 @@
+<h1>Trained Models</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- <tr *ngFor="let model of models"> -->
+        <tr *ngFor="let model of models$ | async">
+            <th scope="row">{{ model.id }}</th>
+            <!-- <td>{{ model.algorithm }}</td> -->
+            <td ngbDropdown class="nav-item dropdown">
+                <a class="nav-link" ngbDropdownToggle class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                    (contextmenu)="showRightClickMenu($event, model)">
+                    <!-- <td> -->
+                    <!-- <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown"> -->
+
+
+
+                    <!-- <div ngbDropdown class="nav-item dropdown"> -->
+                    <!-- <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+            Dropdown blah Menu
+          </button> -->
+                    <!-- <a class="nav-link" ngbDropdownToggle class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown blah Menu
+          </a> -->
+                    <!-- <div ngbDropdown class="nav-item dropdown"> -->
+                    <!-- <div> -->
+                    <!-- <a *ngFor="let item of menuItems" class="dropdown-item" (contextmenu)="showRightClickMenu($event, item)"> -->
+
+                    <!-- <a class="dropdown-item" (contextmenu)="showRightClickMenu($event, model)"> -->
+
+                    <!-- <a class="nav-link" ngbDropdownToggle class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+          (contextmenu)="showRightClickMenu($event, model)"> -->
+                    {{ model.algorithm }}
+                    <!-- </button> -->
+                    <!-- </a> -->
+                    <!-- {{ item.label }} -->
+                    <div ngbDropdownMenu class="dropdown-menu right-click-menu"
+                        [ngClass]="{'show': model.showRightClickMenu}">
+                        <a class="dropdown-item" href="#">Action 1</a>
+                        <a class="dropdown-item" href="#">Action 2</a>
+                        <a class="dropdown-item" href="#">Action 3</a>
+                    </div>
+                    <!-- </button> -->
+                </a>
+                <!-- </div> -->
+                <!-- </div> -->
+            </td>
+            <td>
+                <button title="Live Predict" class="btn btn-sm btn-outline-primary"><fa-icon class="action" size="2x"
+                        [icon]="chartIcon"></fa-icon></button>
+                <button title="Evaluate" class="ms-2 btn btn-sm btn-outline-primary"><fa-icon class="action" size="2x"
+                        [icon]="evaluateIcon"></fa-icon></button>
+                <button title="Evaluation Results" class="ms-2 btn btn-sm btn-outline-primary"><fa-icon class="action"
+                        size="2x" [icon]="reportIcon"></fa-icon></button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<!-- <li ngbDropdown class="nav-item dropdown">
+  <a class="nav-link" ngbDropdownToggle class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Machine Learning
+  </a>
+  <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <a class="dropdown-item" (click)="livePrediction()"><fa-icon class="me-2" [icon]="chartIcon"></fa-icon>Live
+      Prediction</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" routerLink="/ml/annotation"><fa-icon class="me-2" [icon]="tagsIcon"></fa-icon>Annotate</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" routerLink="/ml/annotations">Saved Annotations</a>
+    <a class="dropdown-item" routerLink="/ml/models">Trained Models</a>
+  </div>
+</li> -->
+
+
+<!-- <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+    Dropdown Menu
+  </button>
+  <div class="dropdown-menu">
+    <a *ngFor="let item of menuItems" class="dropdown-item" (contextmenu)="showRightClickMenu($event, item)">
+      {{ item.label }}
+      <div class="dropdown-menu right-click-menu" [ngClass]="{'show': item.showRightClickMenu}">
+        <a class="dropdown-item" href="#">Action 1</a>
+        <a class="dropdown-item" href="#">Action 2</a>
+        <a class="dropdown-item" href="#">Action 3</a>
+      </div>
+    </a>
+  </div>
+</div> -->
